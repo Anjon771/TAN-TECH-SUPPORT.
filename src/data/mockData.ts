@@ -132,7 +132,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     badge: 'Essential',
     description: 'Zero-delay uninterrupted power supply backup for Wi-Fi routers, ONU, CCTV, and mobile devices during power outages.',
     specs: ['6-8 Hours Continuous Backup', '8800mAh Grade-A Li-ion Cells', '9V/12V DC + 5V USB Multi-output', 'Overcharge & Surge Protection'],
-    image: 'https://images.unsplash.com/photo-1609592424109-dd9892f1b177?auto=format&fit=crop&w=600&q=80'
+    image: 'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'prod-9',
@@ -144,9 +144,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 165,
     stock: 45,
+    badge: 'High Speed',
     description: 'Compact metal casing USB 3.0 flash drive offering up to 120MB/s transfer speeds for documents, photos, and HD videos.',
     specs: ['64GB High Capacity', 'USB 3.0 Ultra High Speed', 'Full Metal Waterproof Body', '5 Years Warranty'],
-    image: 'https://images.unsplash.com/photo-1624823183493-5f6311684c37?auto=format&fit=crop&w=600&q=80'
+    image: 'https://images.unsplash.com/photo-1618410320928-25228d811631?auto=format&fit=crop&w=800&q=80'
   }
 ];
 

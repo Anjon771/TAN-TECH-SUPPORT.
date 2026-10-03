@@ -51,11 +51,11 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
         <div className="p-4 sm:p-5 space-y-4 text-slate-700 text-sm">
           {/* Product Image */}
           {product.image && (
-            <div className="w-full h-44 sm:h-52 bg-slate-100 rounded-lg overflow-hidden border border-slate-200">
+            <div className="w-full h-52 sm:h-60 bg-white rounded-lg overflow-hidden border border-slate-200 flex items-center justify-center p-3 shadow-inner">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="max-w-full max-h-full object-contain filter drop-shadow-md transition-transform hover:scale-105"
               />
             </div>
           )}

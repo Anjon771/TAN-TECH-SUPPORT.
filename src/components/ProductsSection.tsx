@@ -124,11 +124,11 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
 
                 {/* Product Image Thumbnail */}
                 {prod.image && (
-                  <div className="w-full h-20 sm:h-24 overflow-hidden bg-white/40 flex items-center justify-center p-1 border-b border-yellow-400/50">
+                  <div className="w-full h-24 sm:h-28 overflow-hidden bg-white/95 backdrop-blur-xs flex items-center justify-center p-2 border-b border-yellow-400/60 shadow-inner relative group/img">
                     <img
                       src={prod.image}
                       alt={prod.name}
-                      className="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform"
+                      className="w-full h-full object-contain filter drop-shadow-md transition-all duration-300 group-hover:scale-110 group-hover:brightness-105 rounded-xs"
                       loading="lazy"
                     />
                   </div>
