@@ -48,7 +48,7 @@ export const SideSection: React.FC<SideSectionProps> = ({
             key={vehicle.id}
             onClick={() => onOpenVideoReview(vehicle)}
             className="group cursor-pointer bg-[#e1e69b] hover:bg-[#d6dc87] p-1.5 rounded-lg border border-yellow-600/30 transition-all flex items-center gap-2 text-left"
-            title={`Watch ${vehicle.bengaliName} review`}
+            title={`Watch ${vehicle.name} review`}
           >
             {/* The iconic Play button styling from original prototype */}
             <div className="shrink-0 w-12 h-8 bg-[#bdae1d] shadow-[2px_3px_0_#8f8316] group-hover:translate-y-[-1px] group-active:translate-y-[1px] transition-transform grid place-items-center rounded-sm">
@@ -57,7 +57,7 @@ export const SideSection: React.FC<SideSectionProps> = ({
 
             <div className="overflow-hidden flex-1">
               <p className="text-[11px] font-bold text-[#0d2d4e] truncate group-hover:text-teal-900">
-                {vehicle.bengaliName}
+                {vehicle.name}
               </p>
               <p className="text-[10px] text-teal-800 font-mono">
                 ৳{vehicle.price.toLocaleString()}

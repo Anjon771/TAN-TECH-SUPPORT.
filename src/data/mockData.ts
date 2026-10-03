@@ -1,5 +1,5 @@
 import { Product, PrintDesign, ShowroomVehicle } from '../types';
-import { GALLERY_IMGS } from './assets';
+import { GALLERY_IMGS, PRINT_GALLERY_COLLECTIONS } from './assets';
 
 export const INITIAL_PRODUCTS: Product[] = [
   {
@@ -159,6 +159,8 @@ export const PRINT_DESIGNS: PrintDesign[] = [
     basePrice: 50,
     unit: 'card',
     imageKey: GALLERY_IMGS[0],
+    galleryImages: PRINT_GALLERY_COLLECTIONS['print-1'],
+    badge: 'Popular',
     aspect: 'aspect-square',
     description: 'Waterproof, high-resolution thermal transfer printed student & employee ID cards with hologram security option.'
   },
@@ -170,6 +172,8 @@ export const PRINT_DESIGNS: PrintDesign[] = [
     basePrice: 250,
     unit: 'piece',
     imageKey: GALLERY_IMGS[1],
+    galleryImages: PRINT_GALLERY_COLLECTIONS['print-2'],
+    badge: 'HD Canvas',
     aspect: 'aspect-square',
     description: 'Museum-grade photo paper framed in premium synthetic wood with clear protective glass coating.'
   },
@@ -181,6 +185,8 @@ export const PRINT_DESIGNS: PrintDesign[] = [
     basePrice: 350,
     unit: '100 pcs',
     imageKey: GALLERY_IMGS[2],
+    galleryImages: PRINT_GALLERY_COLLECTIONS['print-3'],
+    badge: 'Matte / Gloss',
     aspect: 'aspect-square',
     description: '300 GSM Art Card with velvet matte or glossy spot lamination and precision die-cut corners.'
   },
@@ -192,8 +198,10 @@ export const PRINT_DESIGNS: PrintDesign[] = [
     basePrice: 180,
     unit: 'mug',
     imageKey: GALLERY_IMGS[3],
+    galleryImages: PRINT_GALLERY_COLLECTIONS['print-4'],
+    badge: 'Best Gift',
     aspect: 'aspect-square',
-    description: '11oz dishwasher and microwave safe ceramic mug customized with personal portraits or company branding.'
+    description: '11oz dishwasher and microwave safe ceramic mug customized with personal portraits, photos or company branding.'
   },
   {
     id: 'print-5',
@@ -203,6 +211,8 @@ export const PRINT_DESIGNS: PrintDesign[] = [
     basePrice: 320,
     unit: 'shirt',
     imageKey: GALLERY_IMGS[4],
+    galleryImages: PRINT_GALLERY_COLLECTIONS['print-5'],
+    badge: '100% Cotton',
     aspect: 'aspect-square',
     description: '100% combed cotton 180 GSM t-shirts with breathable DTF full-color graphic prints.'
   },
@@ -214,6 +224,8 @@ export const PRINT_DESIGNS: PrintDesign[] = [
     basePrice: 150,
     unit: 'stamp',
     imageKey: GALLERY_IMGS[5],
+    galleryImages: PRINT_GALLERY_COLLECTIONS['print-6'],
+    badge: 'Flash Ink',
     aspect: 'aspect-square',
     description: 'Refillable self-inking digital laser flash seals for businesses, doctors, and institutions.'
   },
@@ -225,6 +237,8 @@ export const PRINT_DESIGNS: PrintDesign[] = [
     basePrice: 25,
     unit: 'sq. ft.',
     imageKey: GALLERY_IMGS[6],
+    galleryImages: PRINT_GALLERY_COLLECTIONS['print-7'],
+    badge: 'Weatherproof',
     aspect: 'aspect-2/1',
     description: 'Outdoor weatherproof Panaflex and vinyl sticker printing with UV fade-resistant Japanese eco-solvent inks.'
   }

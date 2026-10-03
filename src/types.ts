@@ -46,6 +46,8 @@ export interface PrintDesign {
   basePrice: number;
   unit: string;
   imageKey: string;
+  galleryImages?: string[];
+  badge?: string;
   aspect: string;
   description: string;
 }
