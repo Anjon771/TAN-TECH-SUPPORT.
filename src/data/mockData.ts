@@ -1,0 +1,284 @@
+import { Product, PrintDesign, ShowroomVehicle } from '../types';
+import { GALLERY_IMGS } from './assets';
+
+export const INITIAL_PRODUCTS: Product[] = [
+  {
+    id: 'prod-0',
+    name: 'Product',
+    banglaName: 'Smart Wireless Device & Receiver',
+    category: 'gadgets',
+    price: 500,
+    originalPrice: 650,
+    rating: 4.8,
+    reviewsCount: 38,
+    stock: 25,
+    badge: 'Popular',
+    description: 'High-quality multipurpose tech gadget with durable ABS body and plug-and-play capability.',
+    specs: ['USB Powered', 'Compact Design', '6 Months Warranty', 'Eco-friendly Material'],
+    image: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-1',
+    name: 'Moballe',
+    banglaName: '4G LTE Smartphone (Android 14)',
+    category: 'electronics',
+    price: 12000,
+    originalPrice: 13500,
+    rating: 4.9,
+    reviewsCount: 112,
+    stock: 14,
+    badge: 'Hot Deal',
+    description: 'Powerful 4G smartphone featuring a 6.5" HD+ 90Hz display, 5000mAh battery, and 50MP AI Dual Camera.',
+    specs: ['6GB RAM + 128GB ROM', '5000mAh Long Battery', 'Type-C 18W Fast Charging', '1 Year Official Warranty'],
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-2',
+    name: 'Computer',
+    banglaName: 'Core i5 Complete Desktop PC Setup',
+    category: 'computers',
+    price: 35000,
+    originalPrice: 38000,
+    rating: 5.0,
+    reviewsCount: 47,
+    stock: 8,
+    badge: 'Best Value',
+    description: 'Complete desktop computer package with Intel Core i5 processor, 16GB DDR4 RAM, 512GB NVMe SSD, and 19" HD LED Monitor.',
+    specs: ['Intel Core i5 High Performance', '16GB DDR4 High Speed RAM', '512GB NVMe Ultra Fast SSD', '19" Eye-care Monitor + Keyboard & Mouse'],
+    image: 'https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-3',
+    name: 'Kyboord',
+    banglaName: 'RGB Backlit Gaming & Typing Keyboard',
+    category: 'computers',
+    price: 650,
+    originalPrice: 850,
+    rating: 4.7,
+    reviewsCount: 89,
+    stock: 40,
+    badge: 'Trending',
+    description: 'Ergonomic tactile keyboard with vibrant rainbow backlighting, silent keys, and spill-resistant design.',
+    specs: ['RGB Multi-color Backlight', 'Standard QWERTY Layout', '10 Million Keystroke Lifespan', '1.5m Braided Cable'],
+    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-4',
+    name: 'Mouse',
+    banglaName: 'Optical Gaming & Office Mouse',
+    category: 'computers',
+    price: 350,
+    originalPrice: 450,
+    rating: 4.8,
+    reviewsCount: 140,
+    stock: 55,
+    description: 'High-precision optical wired mouse with 4 adjustable DPI levels (800-2400) and comfortable contour grip.',
+    specs: ['2400 Adjustable DPI', 'Ergonomic Right/Left Hand Grip', 'Non-slip Scroll Wheel', '6 Months Replacement'],
+    image: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-5',
+    name: 'Wacht',
+    banglaName: 'Smart Watch with Bluetooth Calling',
+    category: 'gadgets',
+    price: 1500,
+    originalPrice: 1950,
+    rating: 4.9,
+    reviewsCount: 95,
+    stock: 22,
+    badge: 'Featured',
+    description: 'Modern smartwatch with 1.85" HD touch screen, Bluetooth calling, heart rate/SpO2 monitor, and 10-day battery life.',
+    specs: ['Bluetooth Calling & Notifications', 'Heart Rate & Sleep Tracker', 'IP68 Waterproof', 'Multiple Sports Modes'],
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-6',
+    name: 'Pan',
+    banglaName: 'Dual Stylus Gel Pen Pack',
+    category: 'stationery',
+    price: 20,
+    originalPrice: 30,
+    rating: 4.6,
+    reviewsCount: 220,
+    stock: 200,
+    description: 'Smooth writing 0.5mm gel pen with soft-touch capacitive stylus tip for smartphones and tablets.',
+    specs: ['Dual-function Gel & Touch Stylus', 'Smudge-proof Quick Dry Ink', 'Metal Pocket Clip', 'Refillable Cartridge'],
+    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-7',
+    name: 'Bag',
+    banglaName: 'Waterproof Laptop Backpack 15.6"',
+    category: 'stationery',
+    price: 900,
+    originalPrice: 1200,
+    rating: 4.8,
+    reviewsCount: 63,
+    stock: 19,
+    description: 'Heavy-duty water-resistant oxford fabric laptop backpack with anti-theft zipper, padded 15.6" sleeve, and external USB port.',
+    specs: ['Waterproof High Density Fabric', 'Fits up to 15.6" Laptops', 'Anti-theft Hidden Pockets', 'Built-in External USB Port'],
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-8',
+    name: 'Online Mini Ups',
+    banglaName: 'Online Mini UPS (Router & ONU)',
+    category: 'power',
+    price: 2200,
+    originalPrice: 2600,
+    rating: 5.0,
+    reviewsCount: 88,
+    stock: 15,
+    badge: 'Essential',
+    description: 'Zero-delay uninterrupted power supply backup for Wi-Fi routers, ONU, CCTV, and mobile devices during power outages.',
+    specs: ['6-8 Hours Continuous Backup', '8800mAh Grade-A Li-ion Cells', '9V/12V DC + 5V USB Multi-output', 'Overcharge & Surge Protection'],
+    image: 'https://images.unsplash.com/photo-1609592424109-dd9892f1b177?auto=format&fit=crop&w=600&q=80'
+  },
+  {
+    id: 'prod-9',
+    name: 'Usb pen Drive',
+    banglaName: 'High-Speed USB 3.0 Flash Drive 64GB',
+    category: 'computers',
+    price: 450,
+    originalPrice: 600,
+    rating: 4.9,
+    reviewsCount: 165,
+    stock: 45,
+    description: 'Compact metal casing USB 3.0 flash drive offering up to 120MB/s transfer speeds for documents, photos, and HD videos.',
+    specs: ['64GB High Capacity', 'USB 3.0 Ultra High Speed', 'Full Metal Waterproof Body', '5 Years Warranty'],
+    image: 'https://images.unsplash.com/photo-1624823183493-5f6311684c37?auto=format&fit=crop&w=600&q=80'
+  }
+];
+
+export const PRINT_DESIGNS: PrintDesign[] = [
+  {
+    id: 'print-1',
+    title: 'PVC Smart ID Card & Badge',
+    bengaliTitle: 'Smart PVC ID Card Printing',
+    category: 'Cards',
+    basePrice: 50,
+    unit: 'card',
+    imageKey: GALLERY_IMGS[0],
+    aspect: 'aspect-square',
+    description: 'Waterproof, high-resolution thermal transfer printed student & employee ID cards with hologram security option.'
+  },
+  {
+    id: 'print-2',
+    title: 'Custom Photo Frame & Canvas Print',
+    bengaliTitle: 'Premium Canvas Photo Frame',
+    category: 'Frames',
+    basePrice: 250,
+    unit: 'piece',
+    imageKey: GALLERY_IMGS[1],
+    aspect: 'aspect-square',
+    description: 'Museum-grade photo paper framed in premium synthetic wood with clear protective glass coating.'
+  },
+  {
+    id: 'print-3',
+    title: 'Business Visiting Cards & Flyers',
+    bengaliTitle: 'Visiting Cards & Business Flyers',
+    category: 'Cards',
+    basePrice: 350,
+    unit: '100 pcs',
+    imageKey: GALLERY_IMGS[2],
+    aspect: 'aspect-square',
+    description: '300 GSM Art Card with velvet matte or glossy spot lamination and precision die-cut corners.'
+  },
+  {
+    id: 'print-4',
+    title: 'Custom Ceramic Coffee Mug',
+    bengaliTitle: 'Custom Printed Coffee Mug',
+    category: 'Sublimation',
+    basePrice: 180,
+    unit: 'mug',
+    imageKey: GALLERY_IMGS[3],
+    aspect: 'aspect-square',
+    description: '11oz dishwasher and microwave safe ceramic mug customized with personal portraits or company branding.'
+  },
+  {
+    id: 'print-5',
+    title: 'Personalized Printed T-Shirt',
+    bengaliTitle: 'Custom Graphic Cotton T-Shirt',
+    category: 'Apparel',
+    basePrice: 320,
+    unit: 'shirt',
+    imageKey: GALLERY_IMGS[4],
+    aspect: 'aspect-square',
+    description: '100% combed cotton 180 GSM t-shirts with breathable DTF full-color graphic prints.'
+  },
+  {
+    id: 'print-6',
+    title: 'Official Stamp & Flash Seal',
+    bengaliTitle: 'Digital Laser Flash Stamp Seal',
+    category: 'Office',
+    basePrice: 150,
+    unit: 'stamp',
+    imageKey: GALLERY_IMGS[5],
+    aspect: 'aspect-square',
+    description: 'Refillable self-inking digital laser flash seals for businesses, doctors, and institutions.'
+  },
+  {
+    id: 'print-7',
+    title: 'Large HD Banner, Poster & Signboard',
+    bengaliTitle: 'HD Outdoor Banner & Poster Signboard',
+    category: 'Banners',
+    basePrice: 25,
+    unit: 'sq. ft.',
+    imageKey: GALLERY_IMGS[6],
+    aspect: 'aspect-2/1',
+    description: 'Outdoor weatherproof Panaflex and vinyl sticker printing with UV fade-resistant Japanese eco-solvent inks.'
+  }
+];
+
+export const SHOWROOM_VEHICLES: ShowroomVehicle[] = [
+  {
+    id: 'veh-1',
+    name: 'Smart Electric Bike Pro (60V)',
+    bengaliName: 'Smart Electric Bike Pro 60V',
+    type: 'Electric Vehicle',
+    price: 85000,
+    specs: ['60-70 km per charge', '45 km/h Top Speed', 'Graphene Long Life Battery', 'Digital LCD Meter'],
+    features: ['Keyless Remote Start', 'Hydraulic Disc Brake', 'Anti-theft GPS alarm'],
+    videoTitle: 'E-Bike Test Ride & Full Performance Review'
+  },
+  {
+    id: 'veh-2',
+    name: 'Tan Tech Cargo Van & Delivery Carrier',
+    bengaliName: 'Commercial Delivery Cargo Van',
+    type: 'Commercial Vehicle',
+    price: 380000,
+    specs: ['1 Ton Load Capacity', 'Fuel Efficient Diesel Engine', 'Heavy Duty Chassis', 'Power Steering'],
+    features: ['Low maintenance cost', 'Rear safety parking camera', 'Reinforced suspension'],
+    videoTitle: 'Commercial Cargo Van Walkthrough & Specs'
+  },
+  {
+    id: 'veh-3',
+    name: 'All-Terrain 150cc Commuter Bike',
+    bengaliName: '150cc Commuter Motorbike',
+    type: 'Motorcycle',
+    price: 165000,
+    specs: ['150cc 4-Stroke Engine', '45 km/L Mileage', 'Mono-shock Absorber', 'Tubeless Tyres'],
+    features: ['Sporty LED Headlamp', 'Dual Disc CBS', 'USB Mobile Charger'],
+    videoTitle: 'Motorcycle Road Test & Exhaust Sound'
+  },
+  {
+    id: 'veh-4',
+    name: 'Mini Smart City Car (Electric 4-Door)',
+    bengaliName: 'Mini Smart Electric City Car',
+    type: 'Electric Car',
+    price: 490000,
+    specs: ['120 km Range', 'Lithium Iron Battery', 'Air Conditioned Cabin', 'Touch Multimedia'],
+    features: ['Automatic Transmission', 'Power Windows', 'Economical Daily Commute'],
+    videoTitle: 'Electric City Car Interior & Driving Demo'
+  },
+  {
+    id: 'veh-5',
+    name: 'Commercial Solar Power Van System',
+    bengaliName: 'Solar Mobile Power Van Hub',
+    type: 'Solar Tech Unit',
+    price: 210000,
+    specs: ['3KW Solar Hybrid Inverter', '24V Industrial LiFePO4', 'Sine Wave Output', 'Mobile Power Hub'],
+    features: ['Zero Fuel Generator Replacement', 'Emergency Home/Showroom Backup', 'Smart App Monitoring'],
+    videoTitle: 'Solar Power System Unboxing & Live Test'
+  }
+];
